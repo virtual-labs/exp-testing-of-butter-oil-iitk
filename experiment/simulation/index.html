@@ -1,13 +1,337 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Testing of Butter Oil (Ghee)</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-		<!-- Your code goes here-->
+<body id="body">
+  <main class="main">
+    <div class="header" id="header">
+          <h1 id="ins">Instructions :-</h1>
+          <h1 id="text"> Click on 'START' button to start the experiment</h1>
+        </div>
+        
+        
+        <div class="footer">
+            
+          <div id="experiment">
+            
+            <!-- ------------------------------  BACKGROUNDS  ----------------------- -->
+            
+            <img id="workingtable" src="images/bg-image.png" alt="">
+            
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+            
+
+
+
+
+
+
+
+            
+
+
+            
+
+
+
+
+
+
+
+
+
+            
+            
+            
+
+
+
+
+
+            <div id="stp1">
+              <img id="machine" src="images/wheighing-machine.png" alt="">
+              <img id="spatula" onclick="spatula1()" src="images/spatula.png" alt="">
+
+              <img class="ghee-drop" id="ghee-drop1" src="images/ghee-drop.png" alt="">
+              <img class="ghee-drop" id="ghee-drop2" src="images/ghee-drop.png" alt="">
+              <img class="ghee-drop" id="ghee-drop3" src="images/ghee-drop.png" alt="">
+              <button id="on" onclick="on1()">ON</button>
+              <button id="tare" onclick="tare1()">TARE</button>
+              <h3 id="reading">00.00</h3>
+
+              <img id="flask-b" src="images/flask-B.png" alt="">
+              <img id="flask-s" onclick="placeFlaskS()" src="images/flask-S.png" alt="">
+
+              <img id="starch" src="images/ghee-bottle copy.png" alt="">
+              <img id="cap" onclick="cap1()" src="images/bottle-cap.png" alt="">
+
+            </div>
+
+            <!-- STEP 2 -->
+            <div id="stp2" style="visibility: hidden;">
+                <img id="flask-s2" src="images/flask-with-sample.png" alt=""> <!-- Flask S with sample from Step 1 -->
+                <img id="flask-b2" src="images/flask-B.png" alt=""> <!-- Flask B for Step 2 -->
+                
+                <img id="glycerol" src="images/glycerol.png" alt="">
+                <img id="glycerol-cap" onclick="openGlycerolCap()" src="images/glycerol-cap copy.png" alt="">
+                
+                <img id="naoh" src="images/naoh-bottle.png" alt="">
+                <img id="naoh-cap" onclick="openNaOHCap()" src="images/naoh-cap.png" alt="">
+                
+                <img id="pipette2" onclick="handlePipetteClick()" src="images/empty-glycerol-pipette.png" alt="">
+                <img id="naoh-pipette" onclick="handleNaOHPipetteClick()" src="images/naoh-pipette.png" alt="">
+
+                
+                <img class="drop" id="drop-glycerol" src="images/glycerol-new-drop.png" alt="">
+                <img class="drop" id="drop-naoh" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 3 -->
+            <div id="stp3" style="visibility: hidden;">
+                <img id="flask-s3" onclick="handleFlaskS3Click()" src="images/flask-with-sample.png" alt="">
+                <img id="flask-b3" onclick="handleFlaskB3Click()" src="images/flask-b-sample.png" alt="">
+                
+                <img id="funnel-stand" src="images/funnel-stand.png" alt="">
+                <img id="burner" onclick="handleBurnerClick()" src="images/burner-new.png" alt="">
+                <img id="stirrer" onclick="handleStirrerClick()" src="images/stirrer.png" alt="">
+            </div>
+
+            <!-- STEP 4 -->
+            <div id="stp4" style="visibility: hidden;">
+                <img id="flask-s4" src="images/flask-saponifiedclear.png" alt="">
+                <img id="flask-b4" src="images/flask-b-sample.png" alt="">
+                
+                <img id="distilled-water4" onclick="handleDistilledWaterClick()" src="images/distilled water (2).png" alt="">
+                <img id="measuring-cylinder4" onclick="handleCylinderClick()" src="images/measuring cylinder.png" alt="">
+                
+                <!-- Drops for Step 4 -->
+                <img class="drop-step4" id="drop-distilled-cylinder-1" src="images/drop-light-blue.png" alt="">
+                <img class="drop-step4" id="drop-cylinder-flask-s" src="images/drop-light-blue.png" alt="">
+                <img class="drop-step4" id="drop-distilled-cylinder-2" src="images/drop-light-blue.png" alt="">
+                <img class="drop-step4" id="drop-cylinder-flask-b" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 5 -->
+            <div id="stp5" style="visibility: hidden;">
+                <img id="flask-s5" src="images/flasks-after-93ml.png" alt="">
+                <img id="flask-b5" src="images/flaskb-after-93ml.png" alt="">
+                
+                <img id="h2so4-bottle" src="images/h2so4.png" alt="">
+                <img id="h2so4-cork" onclick="handleCorkClick()" src="images/h2so4-cork.png" alt="">
+                
+                <img id="h2so4-pipette" onclick="handleH2SO4PipetteClick()" src="images/h2so4-pipette.png" alt="">
+                
+                <!-- Drops for Step 5 -->
+                <img class="drop-step5" id="drop-h2so4-flask-s" src="images/drop-light-blue.png" alt="">
+                <img class="drop-step5" id="drop-h2so4-flask-b" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 6 -->
+            <div id="stp6" style="visibility: hidden;">
+                <img id="distillation-apparatus" src="images/distillation-apparatus.png" alt="">
+                <img id="burner6" onclick="handleBurnerPlacement()" src="images/burner-new.png" alt="">
+            </div>
+
+            <!-- STEP 7 -->
+            <div id="stp7" style="visibility: hidden;">
+                <img id="distillation-apparatus7" src="images/distillation-apparatus-step7.png" alt="">
+                <img id="funnel7" onclick="handleFunnelClick()" src="images/funnel.png" alt="">
+                <img id="empty-flask7" onclick="handleFlaskClick()" src="images/empty-110ml-flask.png" alt="">
+                <img id="distillate-flask7" src="images/distillate-110ml.png" alt="">
+                <img id="burner7" onclick="handleBurner7Click()" src="images/burner-new.png" alt="">
+                
+                <!-- Drops for Step 7 distillation -->
+                <img class="drop-step7" id="drop-distillation" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 8 -->
+            <div id="stp8" style="visibility: hidden;">
+                <img id="distillation-apparatus8" src="images/distillation-apparatus-step8.png" alt="">
+                <img id="funnel8" onclick="handleFunnel8Click()" src="images/funnel.png" alt="">
+                <img id="empty-flask8" onclick="handleFlask8Click()" src="images/empty-110ml-flask.png" alt="">
+                <img id="distillate-flask8" src="images/distillate-110ml.png" alt="">
+                <img id="burner8" onclick="handleBurner8Click()" src="images/burner-new.png" alt="">
+                
+                <!-- Drops for Step 8 distillation -->
+                <img class="drop-step8" id="drop-distillation8" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 9 -->
+            <div id="stp9" style="visibility: hidden;">
+                <!-- Flask S Filtration -->
+                <img id="beaker-s9" src="images/beaker2.png" alt="">
+                <img id="beaker-s-filtered9" src="images/after-filteration.png" alt="">
+                <img id="funnel-s9" onclick="handleFunnelS9Click()" src="images/funnel copy.png" alt="">
+                <img id="filter-paper-s9" onclick="handleFilterPaperS9Click()" src="images/filter-paper-step9.png" alt="">
+                <img id="distillate-s9" onclick="handleDistillateS9Click()" src="images/distillate-110ml.png" alt="">
+                
+                <!-- Flask B Filtration -->
+                <img id="beaker-b9" src="images/beaker2.png" alt="">
+                <img id="beaker-b-filtered9" src="images/after-filteration.png" alt="">
+                <img id="funnel-b9" onclick="handleFunnelB9Click()" src="images/funnel copy.png" alt="">
+                <img id="filter-paper-b9" onclick="handleFilterPaperB9Click()" src="images/filter-paper-step9.png" alt="">
+                <img id="distillate-b9" onclick="handleDistillateB9Click()" src="images/distillate-110ml.png" alt="">
+                
+                <!-- Drops for filtration -->
+                <img class="drop-step9" id="drop-filtration-s" src="images/drop-light-blue.png" alt="">
+                <img class="drop-step9" id="drop-filtration-b" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 10 -->
+            <div id="stp10" style="visibility: hidden;">
+                <!-- Burette with NaOH -->
+                <img id="burette-filled10" src="images/burette-naoh.png" alt="">
+                <!-- Burette Solutions Sequence -->
+                <img id="burette-sol-1" src="images/burette-naoh-solution1.png" alt="">
+                <img id="burette-sol-2" src="images/burette-naoh-solution2.png" alt="">
+                <img id="burette-sol-3" src="images/burette-naoh-solution3.png" alt="">
+                
+                <img id="burette-knob10" onclick="handleBuretteKnobClick()" src="images/Burette-nob.png" alt="">
+                
+                <!-- Filtrate Flask and Titrated Flask -->
+                <img id="filtrate-flask10" onclick="handleFiltrateFlaskClick()" src="images/after-filteration.png" alt="">
+                <img id="titrated-flask10" onclick="handleTitratedFlaskClick()" src="images/titrated.png" alt="">
+                
+                <!-- Phenolphthalein Bottle and Cap -->
+                <img id="phenol-bottle10" src="images/phenolphthelein-bottle.png" alt="">
+                <img id="phenol-cap10" onclick="handlePhenolCapClick()" src="images/phenolphthelein-cap.png" alt="">
+                
+                <!-- Drops for titration -->
+                <img class="drop-step10" id="drop-titration" src="images/drop-light-blue.png" alt="">
+            </div>
+
+            <!-- STEP 11 -->
+            <div id="stp11" style="visibility: hidden;">
+                <!-- Burette with NaOH -->
+                <img id="burette-filled11" src="images/burette-naoh.png" alt="">
+                <!-- Burette Solutions Sequence -->
+                <img id="burette-sol-1-11" src="images/burette-naoh-solution1.png" alt="">
+                <img id="burette-sol-2-11" src="images/burette-naoh-solution2.png" alt="">
+                <img id="burette-sol-3-11" src="images/burette-naoh-solution3.png" alt="">
+                
+                <img id="burette-knob11" onclick="handleBuretteKnob11Click()" src="images/Burette-nob.png" alt="">
+                
+                <!-- Filtrate Flask (Flask B) and Titrated Flask -->
+                <img id="filtrate-flask11" onclick="handleFiltrateFlask11Click()" src="images/after-filteration.png" alt="">
+                <img id="titrated-flask11" onclick="handleTitratedFlask11Click()" src="images/titrated.png" alt="">
+                
+                <!-- Phenolphthalein Bottle and Cap -->
+                <img id="phenol-bottle11" src="images/phenolphthelein-bottle.png" alt="">
+                <img id="phenol-cap11" onclick="handlePhenolCap11Click()" src="images/phenolphthelein-cap.png" alt="">
+                
+                <!-- Drops for titration -->
+                <img class="drop-step11" id="drop-titration-11" src="images/drop-light-blue.png" alt="">
+            </div>
+
+
+            <!-- STEP 12 -->
+            <div id="stp12" style="visibility: hidden;">
+                <!-- Ethanol Washing Setup -->
+                <img id="ethanol-cylinder12" onclick="handleEthanolClick12()" src="images/ethanol-50ml.png" alt="">
+                <img id="empty-cylinder12" src="images/measuring cylinder.png" alt="">
+                <img id="residue-flask12" src="images/empty-110ml-flask.png" alt=""> <!-- Flask S residue -->
+                <img id="filled-flask12" onclick="handleFilledFlask12Click()" src="images/filled-flask.png" alt=""> <!-- Flask S after washing -->
+                
+                <!-- Transfer to Beaker -->
+                <img id="beaker12" src="images/beaker2.png" alt="">
+                
+                <!-- Burette with NaOH -->
+                <img id="burette12" src="images/burette-naoh.png" alt="">
+                <!-- Burette Solutions Sequence -->
+                <img id="burette-sol-1-12" src="images/burette-naoh-solution1.png" alt="">
+                <img id="burette-sol-2-12" src="images/burette-naoh-solution2.png" alt="">
+                <img id="burette-sol-3-12" src="images/burette-naoh-solution3.png" alt="">
+                
+                <img id="burette-knob12" onclick="handleBuretteKnob12Click()" src="images/Burette-nob.png" alt="">
+                
+                <!-- Filtrate Flask -->
+                <img id="filtrate-flask12" onclick="handleFiltrateFlask12Click()" src="images/conical-flask -50ml filled.png" alt="">
+                <img id="titrated-flask12" src="images/conical-flask - titrated (2).png" alt=""> <!-- Pink endpoint -->
+                
+                <!-- Drops -->
+             <img class="drop-step12" id="drop-titration-12" src="images/drop-light-blue.png" alt="">
+                 
+                <!-- Phenolphthalein Indicator -->
+                <img id="phenol-bottle12" src="images/phenolphthelein-bottle.png" alt="">
+                <img id="phenol-cap12" onclick="handlePhenolCap12Click()" src="images/phenolphthelein-cap.png" alt="">
+            </div>
+
+            <!-- STEP 13 -->
+            <div id="stp13" style="visibility: hidden;">
+                <!-- Ethanol Washing Setup -->
+                <img id="ethanol-cylinder13" onclick="handleEthanolClick13()" src="images/ethanol-50ml.png" alt="">
+                <img id="empty-cylinder13" src="images/measuring cylinder.png" alt="">
+                <img id="residue-flask13" src="images/empty-110ml-flask.png" alt=""> <!-- Flask B residue -->
+                <img id="filled-flask13" onclick="handleFilledFlask13Click()" src="images/filled-flask.png" alt=""> <!-- Flask B after washing -->
+                
+                <!-- Transfer to Beaker -->
+                <img id="beaker13" src="images/beaker2.png" alt="">
+                
+                <!-- Burette with NaOH -->
+                <img id="burette13" src="images/burette-naoh.png" alt="">
+                <!-- Burette Solutions Sequence -->
+                <img id="burette-sol-1-13" src="images/burette-naoh-solution1.png" alt="">
+                <img id="burette-sol-2-13" src="images/burette-naoh-solution2.png" alt="">
+                <img id="burette-sol-3-13" src="images/burette-naoh-solution3.png" alt="">
+                
+                <img id="burette-knob13" onclick="handleBuretteKnob13Click()" src="images/Burette-nob.png" alt="">
+                
+                <!-- Filtrate Flask -->
+                <img id="filtrate-flask13" onclick="handleFiltrateFlask13Click()" src="images/conical-flask -50ml filled.png" alt="">
+                <img id="titrated-flask13" src="images/conical-flask - titrated (2).png" alt=""> <!-- Pink endpoint -->
+                
+                <!-- Drops -->
+                 <img class="drop-step13" id="drop-titration-13" src="images/drop-light-blue.png" alt="">
+
+                <!-- Phenolphthalein Indicator (Step 13) -->
+                <img id="phenol-bottle13" src="images/phenolphthelein-bottle.png" alt="">
+                <img id="phenol-cap13" onclick="handlePhenolCap13Click()" src="images/phenolphthelein-cap.png" alt="">
+            </div>
+
+
+
+            <div id="expon">
+              <h3 id="titletext">  Quality Testing <br> of <br> <i> Butter Oil (Ghee) </i> </h3>
+            </div>
+               
+            <button id="start" onclick="start()" >START</button>
+            <button id="skipToStep2" onclick="skipToStep2()" style="position: absolute; top: 10px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 2</button>
+            <button id="skipToStep3" onclick="skipToStep3()" style="position: absolute; top: 40px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 3</button>
+            <button id="skipToStep4" onclick="skipToStep4()" style="position: absolute; top: 70px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 4</button>
+            <button id="skipToStep5" onclick="skipToStep5()" style="position: absolute; top: 100px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 5</button>
+            <button id="skipToStep6" onclick="skipToStep6()" style="position: absolute; top: 130px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 6</button>
+            <button id="skipToStep7" onclick="skipToStep7()" style="position: absolute; top: 160px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 7</button>
+            <button id="skipToStep8" onclick="skipToStep8()" style="position: absolute; top: 190px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 8</button>
+            <button id="skipToStep9" onclick="skipToStep9()" style="position: absolute; top: 220px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 9</button>
+            <button id="skipToStep10" onclick="skipToStep10()" style="position: absolute; top: 250px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 10</button>
+            <button id="skipToStep11" onclick="skipToStep11()" style="position: absolute; top: 280px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 11</button>
+            <button id="skipToStep12" onclick="skipToStep12()" style="position: absolute; top: 310px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 12</button>
+            <button id="skipToStep13" onclick="skipToStep13()" style="position: absolute; top: 340px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 13</button>
+            <button id="skipToStep14" onclick="window.location.href='step14.html'" style="position: absolute; top: 370px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 14</button>
+            <button id="backToStep1" onclick="backToStep1()" style="position: absolute; top: 10px; right: 130px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000; display: none;">Back to Step 1</button>
+          </div>
+        </div>
+
+        
+    </main>
+    <script src="script/project.js"></script>
+    <script src="script/step1.js"></script>
+    <script src="script/step2.js"></script>
+    <script src="script/step3.js"></script>
+    <script src="script/step4.js"></script>
+    <script src="script/step5.js"></script>
+    <script src="script/step6.js"></script>
+    <script src="script/step7.js"></script>
+    <script src="script/step8.js"></script>
+    <script src="script/step9.js"></script>
+    <script src="script/step10.js"></script>
+    <script src="script/step11.js"></script>
+    <script src="script/step12.js"></script>
+    <script src="script/step13.js"></script>
+
 </body>
 </html>
