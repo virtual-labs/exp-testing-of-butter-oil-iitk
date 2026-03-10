@@ -1,0 +1,3375 @@
+/* Mobile devices (landscape only) */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    /* styles here */
+
+
+}
+
+
+@font-face {
+    font-family: digital;
+    src:url('../fonts/digital-7-webfont.woff2') format('woff2'),
+        url('../fonts/digital-7-webfont.woff') format('woff'),
+        url("../fonts/digital-7.ttf") format('truetype');
+  } 
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: rgb(170, 165, 121);
+    overflow: hidden;
+}
+
+.main{
+    height: 45.8vmax;
+    width: 100vmax;
+    background-color: red;
+    position: relative;
+}
+
+.header{
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    height: 3vmax;
+    width: 100vmax; 
+    position: absolute;
+    display: flex;
+    justify-content:first baseline;
+    align-items: center;
+}
+
+#ins{
+    font-size: 2vw;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 1%;
+}
+
+#text{
+    font-size: 1.5vw;
+    font-weight: 100;
+    color: blue;
+}
+
+.footer{
+    position: absolute;
+    align-items: center;
+    top: 3vmax;
+    height: 42.8vmax;
+    width: 100%;
+    background-color: rgb(226, 239, 33);
+}
+
+#experiment{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: blueviolet;
+}
+
+#start{
+    position:absolute;
+    border-radius: 10%;
+    padding: 0.5%;
+    font-size: 1vw;
+    left: 90%;
+    top: 90%;
+    border: none;
+    background-color: rgb(6, 255, 247);
+    box-shadow: 1px 1px 0px 0.5px;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+    animation: vibrate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#start:active{
+    scale: 0.9;
+    transition: all ease 0.2s;
+}
+
+/* ******************************************       Equipments   ************************************** */
+
+#startinglab{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    visibility: visible;    
+
+}
+
+#workingtable{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    visibility: visible;
+
+}
+
+
+/* ********************************************************************   all elements   ********************************************************************** */
+
+
+#expon{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: all;
+    transition-duration: 1s;
+    opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titletext{
+    position: relative;
+    font-size: 0.01vw;
+    text-align: center;
+    font-weight: 1000;
+    transition: all;
+    transition-duration: 2s;
+    opacity: 0%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}   
+
+#mcylinder{
+    position: absolute;
+    height: 30%;
+    width: 5%;
+    bottom: 10%;
+    left: 8%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#msolution{
+    position: absolute;
+    height: 0%;
+    width: 2.78%;
+    bottom: 11%;
+    left: 9.1%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#ms{
+    position: absolute;
+    height: 31%;
+    width: 0.3%;
+    bottom: 14%;
+    left: 10.7%;
+    transition: all;
+    visibility: hidden;
+}
+
+
+#distilled{
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    top: 60%;
+    left: 25%;
+    transition: all;
+    transition-duration: 1s;
+
+
+}
+
+#dwatersol{
+    position: absolute;
+    height: 21.8%;
+    width: 6.5%;
+    bottom: 10.2%;
+    left: 28.5%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sulphuric{
+    position: absolute;
+    height: 27%;
+    width: 6.5%;
+    top: 63%;
+    left: 18%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sulphuricsol{
+    position: absolute;
+    height: 17%;
+    width: 6.3%;
+    bottom: 10%;
+    left: 18.1%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sulcap{
+    position: absolute;
+    height: 15%;
+    width: 7%;
+    top: 57.2%;
+    left: 17.7%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#pipette{
+    position: absolute;
+    height: 40%;
+    width: 3.5%;
+    top: 72%;
+    left: 18.1%;
+    rotate: -90deg;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#pipettesol{
+    position: absolute;
+    height: 0%;
+    width: 0.84%;
+    bottom: 13%;
+    left: 20.85%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#machine{
+    position: absolute;
+    height: 20%;
+    width: 18%;
+    top: 70%;
+    left: 3%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#on{
+    position: absolute;
+    top: 82%;
+    left: 5%;
+    color: white;
+    padding: 0.1%;
+    background-color: red;
+    border-radius: 10%;
+    font-size: 0.8vw;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#on:active{
+    scale: 0.9;
+}
+
+#tare{
+    position: absolute;
+    top: 82%;
+    left: 16.5%;
+    color: rgb(0, 0, 0);
+    padding: 0.1%;
+    background-color: rgb(238, 245, 42);
+    border-radius: 10%;
+    font-size: 0.8vw;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#tare:active{
+    scale: 0.9;
+}
+
+
+#reading{
+    position: absolute;
+    top: 79.5%;
+    right: 85.53%;
+    font-family: digital;
+    font-weight: 300;
+    color: rgb(138, 234, 3);
+    font-size: 2.3vw;
+    transition: all;
+    transition-duration: 1s;
+    opacity: 0%;
+    
+}
+
+
+
+
+#spatula{
+    position: absolute;
+    height: 20%;
+    top: 83%;
+    left: 15%;
+    rotate: 30deg;
+    transition: all;
+    transition-duration: 1s;
+}
+
+
+
+.ghee-drop{
+    position: absolute;
+    height: 20%;
+    width: 5%;
+    top: 50%;
+    left: 10%;
+    opacity: 0%;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 0.9s;
+}
+
+
+
+#flask-b {
+    position: absolute;
+    height: 35%;
+    width: 12;
+    top: 62%;
+    left: 70%;
+    transition: all 1s;
+}
+
+#flask-s {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 62%;
+    left: 58%;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* Hide porcelain dish in step 2 and beyond */
+#stp2 #porcelaindish-empty,
+#stp2 #porcelaindish-filled,
+#stp3 #porcelaindish-empty,
+#stp3 #porcelaindish-filled,
+#stp4 #porcelaindish-empty,
+#stp4 #porcelaindish-filled,
+#stp5 #porcelaindish-empty,
+#stp5 #porcelaindish-filled {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+/* Audio control styles */
+.audio-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+    display: none;
+}
+
+.audio-indicator.playing {
+    display: block;
+}
+
+/* Audio Controller */
+.audio-controller {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 1px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.audio-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.audio-btn:hover {
+    background: #666;
+}
+
+.audio-btn:active {
+    transform: scale(0.9);
+}
+
+.audio-btn.playing {
+    background: #28a745;
+}
+
+
+#starch{
+    position: absolute;
+    height: 40%;
+    width: 15%;
+    top: 55%;
+    left: 30%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#cap{
+    position: absolute;
+    height: 40%;
+    width: 18%;
+    top: 45%;
+    left: 28%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/* *****************************************************************   STEP 1   *********************************************** */
+
+#stp1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+
+}
+
+/* *******************************************************************   STEP 2   ************************************************* */
+
+#stp2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* ******************************************************************   STEP 3   ******************************************************** */
+
+#stp3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#bnob{
+    position: absolute;
+    height: 7.8%;
+    width: 0.65%;
+    top: 54.5%;
+    left: 14.43%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#eburette{
+    position: absolute;
+    height: 85%;
+    left: 5%;
+    top: 10%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fburette{
+    position: absolute;
+    height: 85%;
+    left: 5%;
+    top: 10%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#bsol{
+    position: absolute;
+    width: 1.3%;
+    left: 12.85%;
+    bottom: 48.9%;
+    height: 0%;
+    transition: all;
+    transition-duration: 2s;
+}
+
+#funnel{
+    position: absolute;
+    height: 15%;
+    width: 5%;
+    top: 80%;
+    left: 60%;
+    rotate: 65deg;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#pb{
+    position: absolute;
+    height: 25%;
+    top: 65%;
+    left: 50%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#pc{
+    position: absolute;
+    height: 28.5%;
+    top: 57.2%;
+    left: 51.05%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#naohhalf{
+    position: absolute;
+    height: 35%;
+    left: 80%;
+    top: 55%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#naoh{
+    position: absolute;
+    height: 35%;
+    left: 80%;
+    top: 55%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#drop{
+    position: absolute;
+    height: 3%;
+    top: 54%;
+    left: 73.5%;
+    transition: all;
+    transition-duration: 0.5s;
+    opacity: 0%;
+}
+
+#titration{
+    position: absolute;
+    height: 10%;
+    width: 2.5%;
+    top: 54%;
+    left: 13%;
+}
+
+/* ************************************************************    STEP 4   ************************************************* */
+
+#stp4{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    
+}
+
+#stp4sol{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+#v500{
+    position: absolute;
+    height: 50%;
+    width: 12%;
+    top: 40%;
+    left: 40%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#tfsol{
+    position: absolute;
+    right: 52%;
+    width: 0.8%;
+    top: 32.5%;
+    height: 10%;
+    rotate: 40deg;
+    transition: all;
+    transition-duration: 0.3s;
+    opacity: 0%;
+}
+
+#fsol{
+    position: absolute;
+    left: 45.6%;
+    width: 0.8%;
+    top: 42%;
+    height: 0%;
+    transition: all;
+    transition-duration: 1s;
+
+
+}
+
+#vsol500{
+    position: absolute;
+    opacity: 0%;
+    width: 12%;
+    bottom: 10%;
+    left: 40%;
+    height: 32%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#vsol50{
+    position: absolute;
+    bottom: 10%;
+    height: 0%;
+    left: 45.2%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#distilled2{
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    top: 60%;
+    left: 25%;
+    transition: all;
+    transition-duration: 1s;
+
+
+}
+
+#dwatersol2{
+    position: absolute;
+    height: 21.8%;
+    width: 6.5%;
+    bottom: 10.2%;
+    left: 25.1%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#ms2{
+    position: absolute;
+    height: 0%;
+    width: 0.3%;
+    top: 35%;
+    left: 45.6%;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+#fsol2{
+    position: absolute;
+    left: 45.6%;
+    width: 0.8%;
+    top: 41%;
+    height: 0%;
+    transition: all;
+    transition-duration: 0.3s;
+
+
+}
+
+
+#funnel2{
+    position: absolute;
+    height: 15%;
+    width: 5%;
+    top: 80%;
+    left: 60%;
+    rotate: 65deg;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/* ***********************************************************   STEP 5   **************************************************** */
+
+#stp5{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+#distilled3{
+    position: absolute;
+    height: 40%;
+    width: 13%;
+    top: 50%;
+    left: 25%;
+    transition: all;
+    transition-duration: 1s;
+
+
+}
+
+#dwatersol3{
+    position: absolute;
+    height: 30.8%;
+    width: 8.5%;
+    bottom: 10.2%;
+    left: 25.1%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#v100{
+    position: absolute;
+    height: 40%;
+    width: 10%;
+    bottom: 10%;
+    left: 40%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#mcyl50{
+    position: absolute;
+    height: 40%;
+    bottom: 12%;
+    left: 58%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#msol50{
+    position: absolute;
+    height: 0;
+    width: 3.5%;
+    left: 59.4%;
+    bottom: 13.4%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#vsol475{
+    position: absolute;
+    opacity: 0%;
+    width: 12%;
+    bottom: 10%;
+    left: 70%;
+    height: 24%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#funnel3{
+    position: absolute;
+    height: 15%;
+    width: 5%;
+    top: 80%;
+    left: 60%;
+    rotate: 65deg;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#vsol25{
+    position: absolute;
+    bottom: 10%;
+    height: 0%;
+    left: 45%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#vsol100{
+    position: absolute;
+    opacity: 0%;
+    width: 10%;
+    bottom: 10%;
+    left: 40%;
+    height: 25.5%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/* ********************************************************    STEP 6   ******************************************************* */
+
+#stp6{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Step 6 - Distillation Apparatus Setup */
+/* Distillation apparatus - positioned on EXTREME RIGHT, VISIBLE from start */
+#distillation-apparatus {
+    position: absolute;
+    height: 70%;
+    width: 30%;
+    top: 20%;
+    left: 65%;        /* Extreme right position */
+    opacity: 1;       /* Visible from start */
+    transition: all 1.5s ease-in-out;
+}
+
+/* Burner - positioned in CENTER of table initially */
+#burner6 {
+    position: absolute;
+    height: 20%;
+    width: 12%;
+    top: 75%;
+    left: 44%;        /* Center position */
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+#burner6:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+@keyframes dropFall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
+
+/* Drop fall animation with fade for Step 10 - fades as it reaches flask */
+@keyframes dropFallFade {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+/* ********************************************************    STEP 7   ******************************************************* */
+
+#stp7{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Step 7 - Distillation Process */
+#distillation-apparatus7 {
+    position: absolute;
+    height: 90%;
+    width: 50%;
+    top: 5%;
+    left: 20%;
+    transition: all 1s ease-in-out;
+}
+
+#funnel7 {
+    position: absolute;
+    height: 15%;
+    width: 10%;
+    top: 40%;
+    left: 75%;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+#funnel7:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#empty-flask7 {
+    position: absolute;
+    height: 30%;
+    width: 12%;
+    top: 60%;
+    left: 73%;
+    cursor: default;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+#empty-flask7:hover {
+    transform: scale(1.02);
+}
+
+#distillate-flask7 {
+    position: absolute;
+    height: 30%;
+    width: 12%;
+    top: 60%;
+    left: 73%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 6;
+}
+
+#burner7 {
+    position: absolute;
+    height: 22%;
+    width: 12%;
+    top: 70%;
+    left: 5%;
+    cursor: default;
+    transition: all 1s ease-in-out;
+}
+
+#burner7:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Drop animation for Step 7 */
+.drop-step7 {
+    position: absolute;
+    display: none;
+    width: 1%;
+    height: 2.5%;
+    z-index: 100;
+}
+
+/* ********************************************************    STEP 8   ******************************************************* */
+
+#stp8{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Step 8 - Distillation Process for Flask B */
+#distillation-apparatus8 {
+    position: absolute;
+    height: 90%;
+    width: 50%;
+    top: 5%;
+    left: 20%;
+    transition: all 1s ease-in-out;
+}
+
+#funnel8 {
+    position: absolute;
+    height: 15%;
+    width: 10%;
+    top: 40%;
+    left: 75%;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+#funnel8:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#empty-flask8 {
+    position: absolute;
+    height: 30%;
+    width: 12%;
+    top: 60%;
+    left: 73%;
+    cursor: default;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+#empty-flask8:hover {
+    transform: scale(1.02);
+}
+
+#distillate-flask8 {
+    position: absolute;
+    height: 30%;
+    width: 12%;
+    top: 60%;
+    left: 73%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 6;
+}
+
+#burner8 {
+    position: absolute;
+    height: 22%;
+    width: 12%;
+    top: 70%;
+    left: 5%;
+    cursor: default;
+    transition: all 1s ease-in-out;
+}
+
+#burner8:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Drop animation for Step 8 */
+.drop-step8 {
+    position: absolute;
+    display: none;
+    width: 1%;
+    height: 2.5%;
+    z-index: 100;
+}
+
+/* ********************************************************    STEP 9   ******************************************************* */
+
+#stp9{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Step 9 - Filtration Process */
+/* Flask S Filtration Elements */
+#beaker-s9 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 50%;
+    left: 40%;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+#beaker-s-filtered9 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 50%;
+    left: 40%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 6;
+}
+
+#funnel-s9 {
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    top: 55%;
+    left: 60%;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+#funnel-s9:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#filter-paper-s9 {
+    position: absolute;
+    height: 15%;
+    width: 8%;
+    top: 60%;
+    left: 72%;
+    cursor: default;
+    transition: all 1s ease-in-out;
+    z-index: 11;
+}
+
+#filter-paper-s9:hover {
+    transform: scale(1.02);
+}
+
+#distillate-s9 {
+    position: absolute;
+    height: 30%;
+    width: 12%;
+    top: 55%;
+    left: 20%;
+    cursor: default;
+    transition: all 1.5s ease-in-out;
+    z-index: 12;
+}
+
+#distillate-s9:hover {
+    transform: scale(1.02);
+}
+
+/* Flask B Filtration Elements */
+#beaker-b9 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 50%;
+    left: 40%;
+    display: none;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+#beaker-b-filtered9 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 50%;
+    left: 40%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 6;
+}
+
+#funnel-b9 {
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    top: 55%;
+    left: 60%;
+    cursor: pointer;
+    display: none;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+#funnel-b9:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#filter-paper-b9 {
+    position: absolute;
+    height: 15%;
+    width: 8%;
+    top: 60%;
+    left: 72%;
+    cursor: default;
+    display: none;
+    transition: all 1s ease-in-out;
+    z-index: 11;
+}
+
+#filter-paper-b9:hover {
+    transform: scale(1.02);
+}
+
+#distillate-b9 {
+    position: absolute;
+    height: 30%;
+    width: 12%;
+    top: 55%;
+    left: 20%;
+    cursor: default;
+    display: none;
+    transition: all 1.5s ease-in-out;
+    z-index: 12;
+}
+
+#distillate-b9:hover {
+    transform: scale(1.02);
+}
+
+/* Drop animation for Step 9 */
+.drop-step9 {
+    position: absolute;
+    display: none;
+    width: 1%;
+    height: 2.5%;
+    z-index: 100;
+}
+
+/* ********************************************************    STEP 10   ******************************************************* */
+
+#stp10{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Step 10 - Titration Process */
+/* Burette with NaOH */
+#burette-filled10 {
+    position: absolute;
+    height: 60%;
+    width: 10%;
+    top: 15%;
+    left: 15%;
+    z-index: 3;
+}
+
+#burette-knob10 {
+    position: absolute;
+    height: 3%;
+    width: 3%;
+    top: 70%;
+    left: 14%;
+    cursor: default;
+    z-index: 5;
+    transition: transform 0.3s ease-in-out;
+}
+
+#burette-knob10:hover {
+    transform: scale(1.1);
+}
+
+/* Filtrate and Titrated Flasks */
+#filtrate-flask10 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 55%;
+    left: 45%;
+    z-index: 4;
+    transition: all 1.5s ease-in-out;
+}
+
+#titrated-flask10 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 55%;
+    left: 45%;
+    opacity: 0;
+    display: none;
+    z-index: 4;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Phenolphthalein Bottle and Cap */
+#phenol-bottle10 {
+    position: absolute;
+    height: 25%;
+    width: 10%;
+    top: 60%;
+    left: 75%;
+    z-index: 2;
+}
+
+#phenol-cap10 {
+    position: absolute;
+    height: 8%;
+    width: 8%;
+    top: 58%;
+    left: 76%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+}
+
+#phenol-cap10:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Drop animation for Step 10 */
+.drop-step10 {
+    position: absolute;
+    display: none;
+    width: 1%;
+    height: 2.5%;
+    z-index: 100;
+}
+
+.drop-step11 {
+    position: absolute;
+    display: none;
+    width: 1%;
+    height: 2.5%;
+    z-index: 100;
+}
+
+/* ********************************************************    STEP 11   ******************************************************* */
+
+#stp11 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Step 11 - Titration Process (Flask B) */
+/* Burette with NaOH */
+#burette-filled11 {
+    position: absolute;
+    height: 60%;
+    width: 10%;
+    top: 15%;
+    left: 15%;
+    z-index: 3;
+}
+
+#burette-knob11 {
+    position: absolute;
+    height: 3%;
+    width: 3%;
+    top: 70%;
+    left: 14%;
+    cursor: default;
+    z-index: 5;
+    transition: transform 0.3s ease-in-out;
+}
+
+#burette-knob11:hover {
+    transform: scale(1.1);
+}
+
+/* Filtrate and Titrated Flasks */
+#filtrate-flask11 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 55%;
+    left: 45%;
+    z-index: 4;
+    transition: all 1.5s ease-in-out;
+}
+
+#titrated-flask11 {
+    position: absolute;
+    height: 35%;
+    width: 15%;
+    top: 55%;
+    left: 45%;
+    opacity: 0;
+    display: none;
+    z-index: 4;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Phenolphthalein Bottle and Cap */
+#phenol-bottle11 {
+    position: absolute;
+    height: 25%;
+    width: 10%;
+    top: 60%;
+    left: 75%;
+    z-index: 2;
+}
+
+#phenol-cap11 {
+    position: absolute;
+    height: 8%;
+    width: 8%;
+    top: 58%;
+    left: 76%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+}
+
+#phenol-cap11:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#fmsol1{
+    position: absolute;
+    left: 7.1%;
+    width: 13.38%;
+    height: 28.1%;
+    bottom: 18%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fbsol1{
+    position: absolute;
+    left: 7.05%;
+    bottom: 10%;
+    width: 13.5%;
+    height: 9%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fcapa{
+    position: absolute;
+    height: 5%;
+    left: 10.5%;
+    top: 38%;
+    width: 6.6%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fehlingB{
+    position: absolute;
+    height: 50%;
+    top: 40%;
+    left: 27%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fusol2{
+    position: absolute;
+    left: 27.05%;
+    height: 4.7%;
+    width: 13.5%;
+    bottom: 45.9%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fmsol2{
+    position: absolute;
+    left: 27.1%;
+    width: 13.38%;
+    height: 28.1%;
+    bottom: 18%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fbsol2{
+    position: absolute;
+    left: 27.05%;
+    bottom: 10%;
+    width: 13.5%;
+    height: 9%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#fcapb{
+    position: absolute;
+    height: 5%;
+    left: 30.5%;
+    top: 38%;
+    width: 6.6%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#mcyl10{
+    position: absolute;
+    height: 40%;
+    top: 50%;
+    left: 65%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#cflask100{
+    position: absolute;
+    height: 40%;
+    top: 50%;
+    left: 80%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#msol10{
+    position: absolute;
+    height: 0%;
+    left: 66.4%;
+    width: 3.59%;
+    bottom: 11.33%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#pipette2{
+    position: absolute;
+    height: 40%;
+    width: 5%;
+    top: 72%;
+    left: 63.1%;
+    rotate: -85deg;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#pipettesol50{
+    position: absolute;
+    height: 0%;
+    width: 0.8%;
+    bottom: 40%;
+    left: 13.4%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#ms3{
+    position: absolute;
+    height: 0%;
+    width: 0.3%;
+    top: 60%;
+    left: 68.1%;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+#distilled4{
+    position: absolute;
+    height: 40%;
+    width: 13%;
+    top: 50%;
+    left: 45%;
+    transition: all;
+    transition-duration: 1s;
+
+
+}
+
+#dwatersol4{
+    position: absolute;
+    height: 30.8%;
+    width: 8.5%;
+    bottom: 10.2%;
+    left: 45.1%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sol20ml{
+    position: absolute;
+    height: 5%;
+    width: 9.8%;
+    bottom: 10%;
+    left: 80.1%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#solblue{
+    position: absolute;
+    height: 5%;
+    width: 9.8%;
+    bottom: 20.1%;
+    left: 30.6%;
+    opacity: 0%;
+    scale: 0.6;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#solbrick{
+    position: absolute;
+    height: 5%;
+    width: 9.8%;
+    bottom: 20.1%;
+    left: 30.6%;
+    opacity: 0%;
+    scale: 0.6;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sol10ml{
+    position: absolute;
+    height: 3%;
+    width: 9%;
+    bottom: 10%;
+    left: 80.5%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sol5ml{
+    position: absolute;
+    height: 1.8%;
+    width: 8.4%;
+    bottom: 10.2%;
+    left: 80.9%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+
+/* *******************************************************    STEP 7    ********************************************** */
+
+#stp7{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+#bstand2{
+    position: absolute;
+    height: 75%;
+    top: 21%;
+    left: 5%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#eburette2{
+    position: absolute;
+    height: 65%;
+    left: 13%;
+    top: 5%;
+    transition: all;
+    transition-duration: 1s;
+    
+}
+
+#burettef2{
+    position: absolute;
+    height: 65%;
+    left: 13%;
+    top: 5%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#bsol2{
+    position: absolute;
+    height: 0%;
+    left: 13.8%;
+    bottom: 40.1%;
+    width: 1.45%;
+    opacity: 100%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#hotplate{
+    position: absolute;
+    height: 20%;
+    width: 15%;
+    top: 75%;
+    left: 30%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#mbottle{
+    position: absolute;
+    height: 20%;
+    top: 70%;
+    left: 50%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#mcap{
+    position: absolute;
+    height: 22%;
+    top: 63.9%;
+    left: 50.9%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#nob2{
+    position: absolute;
+    height: 10%;
+    width: 4%;
+    top: 45%;
+    left: 34%;
+}
+
+.drops{
+    position: absolute;
+    height: 2%;
+    width: 0.5%;
+    top: 60%;
+    left: 35.3%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+#dropblue{
+    visibility: hidden;
+
+}
+
+.tables{
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+}
+
+td,th{
+    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: separate;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2vw;
+}
+
+th{
+    font-size: 1.5vw;
+}
+
+#tbl1{
+    height: 10%;
+    width: 25%;
+    top: 2%;
+    right: 1%;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#calculation1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    background-color: white;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+#ffactor{
+    position: absolute;
+    font-size: 1.7vw;
+    font-weight: 500;
+    top: 30%;
+    left: 30%;
+}
+
+#ffactorinput{
+    font-size: 1.3vw;
+    width: 35%;
+    font-weight: bold;
+}
+
+#formulaimage{
+    position: absolute;
+    top: 65%;
+    height: 0%;
+    width: 30%;
+    left: 35%;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+#formulatext{
+    position: absolute;
+    top: 61%;
+    font-size: 1.3vw;
+    color: blue;
+    cursor: pointer;
+    left: 25%;
+}
+
+.checked{
+    position: absolute;
+    background-color: greenyellow;
+    padding: 2px;
+    border-radius: 1%;
+    top: 55%;
+    left: 50%;
+    font-size: 1vw;
+    box-shadow: 0.5px 0.5px 0px 0px;
+    border: 0.5px solid black;
+}
+
+.checked:active{
+    scale: 0.9;
+}
+
+#checktext1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#ansverify{
+    position: absolute;
+    color: green;
+    top: 31%;
+    left: 58%;
+    visibility: hidden;
+}
+
+#resulttext1{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    font-size: 1.3vw;
+    font-weight: 500;
+    background-color: aqua;
+    visibility: hidden;
+}
+
+#ffactorresult{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-weight: 500;
+    font-size: 1.5vw;
+
+}
+
+/* *******************************************************   STEP 9   ***************************************** */
+
+#v250{
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 60%;
+    left: 85%;
+    transition: all;
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
+#vsol250{
+    position: absolute;
+    opacity: 0%;
+    width: 8%;
+    bottom: 10%;
+    left: 85%;
+    height: 19%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+#funnel4{
+    position: absolute;
+    height: 15%;
+    width: 5%;
+    top: 80%;
+    left: 60%;
+    rotate: 65deg;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+#distilled5{
+    position: absolute;
+    height: 40%;
+    width: 13%;
+    top: 50%;
+    left: 45%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+
+
+}
+
+#dwatersol5{
+    position: absolute;
+    height: 30.8%;
+    width: 8.5%;
+    bottom: 10.2%;
+    left: 45.1%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+/* *****************************************************************   STEP 10   ************************************************* */
+
+#stp10{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.conicals{
+    position: absolute;
+    height: 25%;
+    top: 65%;
+    width: 7%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#conical5{
+    left: 5%;
+}
+
+#conical4{
+    left: 13%;
+}
+
+#conical3{
+    left: 21%;
+}
+
+#conical2{
+    left: 29%;
+}
+
+#conical1{
+    left: 37%;
+}
+
+.conicalsol{
+    position: absolute;
+    bottom: 10%;
+    width: 6.95%;
+    height: 14.2%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+
+}
+
+#conicalsol5{
+    left: 5%;
+}
+
+#conicalsol4{
+    left: 13%;
+}
+
+#conicalsol3{
+    left: 21%;
+}
+
+#conicalsol2{
+    left: 29%;
+}
+
+#conicalsol1{
+    left: 37%;
+}
+
+#vsoln200{
+    position: absolute;
+    opacity: 0%;
+    width: 8%;
+    bottom: 10%;
+    left: 85%;
+    height: 14.5%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#vsoln150{
+    position: absolute;
+    opacity: 0%;
+    width: 8%;
+    bottom: 10%;
+    left: 85%;
+    height: 11.3%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#vsoln100{
+    position: absolute;
+    opacity: 0%;
+    width: 8%;
+    bottom: 10%;
+    left: 85%;
+    height: 8%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#vsoln50{
+    position: absolute;
+    opacity: 0%;
+    width: 8%;
+    bottom: 10%;
+    left: 85%;
+    height: 5%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#ms5{
+    position: absolute;
+    height: 0%;
+    width: 0.3%;
+    top: 60%;
+    left: 68.1%;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+#timerback{
+    position: absolute;
+    height: 18%;
+    width: 10%;
+    background-color: rgb(0, 0, 0);
+    left: 2%;
+    top: 0.5%;
+    transition: all;
+    transition-duration: 1s;
+    color: white;
+    opacity: 0%;
+
+}
+
+#forward{
+    position: absolute;
+    font-size: 1vw;
+    left: 5%;
+    padding: 1%;
+}
+
+#naming{
+    position: absolute;
+    bottom: 0%;
+    left: 11%;
+    font-size: 2vw;
+}
+
+#timevalue2{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10%;
+    width: 10%;
+    border: 1px solid black;
+    color: rgb(255, 0, 0);
+    font-family: digital;
+    font-size: 3vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5%;
+    top: 4%;
+    left: 2%;
+    border-radius: 3%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#amylasebottle{
+    position: absolute;
+    height: 25%;
+    width: 5.5%;
+    left: 85%;
+    top: 65%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+#amylasecap{
+    position: absolute;
+    height: 3.5%;
+    width: 3.1%;
+    top: 64.5%;
+    left: 86.15%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+.ts{
+    position: absolute;
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+    top: 75%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#t0{
+    left: 7%;
+}
+
+#t1{
+    left: 15%;
+}
+
+#t2{
+    left: 23%;
+}
+
+#t3{
+    left: 31%;
+}
+
+#t4{
+    left: 39%;
+}
+
+#hotplatenew{
+    position: absolute;
+    height: 48%;
+    width: 45%;
+    left: 50%;
+    top: 47%;
+    transition: all;
+    transition-duration: 1s;
+    visibility: hidden;
+    
+
+}
+
+#onbutton{
+    position: absolute;
+    height: 8%;
+    width: 4%;
+    top: 76.8%;
+    left: 37.2%;
+    transition: all;
+    transition: 0.1s;
+    opacity: 0%;
+}
+
+#onbutton:active{
+    scale: 0.8;
+}
+
+#indicator{
+    position: absolute;
+    height: 5.1%;
+    top: 77.9%;
+    width: 3.5%;
+    left: 49.1%;
+    transition: all;
+    transition-duration: 1s;
+    opacity: 0%;
+}
+
+#offbutton{
+    position: absolute;
+    height: 8%;
+    width: 4%;
+    top: 76.8%;
+    left: 37.2%;
+    transition: all;
+    transition-duration: 0.1s;
+}
+
+#reading2{
+    position: absolute;
+    top: 78.3%;
+    right: 53.53%;
+    font-family: digital;
+    font-weight: 300;
+    color: red;
+    font-size: 2.3vw;
+    transition: all;
+    transition-duration: 1s;
+    opacity: 0%;
+    
+}
+
+#plus{
+    position: absolute;
+    top: 78%;
+    left: 59%;
+    width: 2.2%;
+
+    color: white;
+    padding: 0.1%;
+    background-color: rgb(2, 17, 61);
+    border-radius: 10%;
+    font-size: 1.4vw;
+    transition: all;
+    transition-duration: 0.1s;
+
+}
+
+#plus:active{
+    scale: 0.9;
+}
+
+#minus{
+    position: absolute;
+    top: 78%;
+    left: 54%;
+    width: 2.2%;
+    color: white;
+    padding: 0.1%;
+    background-color: rgb(2, 17, 61);
+    border-radius: 10%;
+    font-size: 1.4vw;
+    transition: all;
+    transition-duration: 0.1s;
+
+}
+
+#minus:active{
+    scale: 0.9;
+}
+
+#controls{
+    visibility: hidden;
+}
+
+
+/* ******************************************************   STEP 12   ********************************************* */
+
+
+#stp12{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.sconicals{
+    position: absolute;
+    height: 35%;
+    width: 11%;
+    top: 55%;
+    left: 110%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sconicalsol1{
+    position: absolute;
+    width: 9%;
+    bottom: 10%;
+    left: 81%;
+    height: 2%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#sconicalsol2{
+    position: absolute;
+    width: 10%;
+    bottom: 10%;
+    left: 80.5%;
+    height: 3%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.sconicalsols{
+    position: absolute;
+    width: 11%;
+    bottom: 10%;
+    left: 110%;
+    height: 4.5%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/* *******************************************************   SECOND TITRATION TABLES AND CALCULATION   ****************************************** */
+
+#tbl3{
+    height: 30%;
+    width: 25%;
+    top: 2%;
+    right: 1%;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+
+/* ************************************************************   step 14   ****************************************** */
+
+#stp14{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+#tbl2{
+    height: 15%;
+    width: 40%;
+    top: 5%;
+    left: 30%;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+#rsugar{
+    position: absolute;
+    font-size: 1.7vw;
+    font-weight: 700;
+    top: 40%;
+    left: 25%;
+}
+
+#rsugarinput{
+    font-size: 1.3vw;
+    width: 30%;
+    font-weight: bold;
+}
+
+#formulaimage2{
+    position: absolute;
+    top: 66%;
+    height: 0%;
+    width: 30%;
+    left: 35%;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+#formulatext2{
+    position: absolute;
+    top: 61%;
+    font-size: 1.3vw;
+    color: blue;
+    cursor: pointer;
+    left: 25%;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+#checktext2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#ansverify2{
+    position: absolute;
+    color: green;
+    top: 41%;
+    left: 58%;
+    visibility: hidden;
+}
+
+#resulttext2{
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    font-size: 1.3vw;
+    font-weight: 500;
+    background-color: aqua;
+    visibility: hidden;
+}
+
+/* *************************************************************   step 15   *********************************************** */
+
+#stp15{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    visibility: hidden;
+    text-align: center;
+}
+
+#inference{
+    font-size: 4vw;
+    padding: 2%;
+}
+
+#outcome{
+    padding: 1%;
+    margin-top: 0%;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#graph{
+    height: 40%;
+    margin-top: 2%;
+}
+
+#graphtext{
+    font-size: 1.3vw;
+    font-weight: 500;
+    padding: 1%;
+    margin-top: 1%;
+}/* Step 2 Styles */
+#stp2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#flask-s2 {
+    position: absolute;
+    top: 48%;
+    left: 36%;
+    width: 15%;
+    transition: all 1s;
+}
+
+#flask-b2 {
+    position: absolute;
+    top: 48%;
+    left: 50%; /* Positioned to the right of Flask S */
+    width: 15%;
+    transition: all 1s;
+}
+
+#glycerol {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    height: 80%;
+    width: 30%;
+}
+
+#glycerol-cap {
+    position: absolute;
+    top: 64%;
+    left: 30.3%;
+    width: 6%;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+#naoh {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    height:40%;
+    width: 12%;
+}
+
+#naoh-cap {
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    width: 3.5%;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+#pipette2 {
+    position: absolute;
+    top: 68%;
+    left: 10%; /* Initial resting position */
+    width: 12%;
+    height: 47%;
+    cursor: pointer;
+    transition: all 1s;
+    z-index: 5;
+    transform: rotate(20deg);
+}
+
+#naoh-pipette {
+    position: absolute;
+    top: 63%;
+    left: 80%; /* Position next to glycerol pipette */
+    width: 12%;
+    height: 50%;
+    cursor: pointer;
+    transition: all 1s;
+    z-index: 5;
+    transform: rotate(80deg); /* Initial slanting position */
+}
+
+
+/* Common drop properties */
+.drop {
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Glycerol drop (independent styling) */
+#drop-glycerol {
+    width: 3%;
+    height: 15%;
+    opacity: 1;
+}
+
+/* NaOH light-blue drop (independent styling) */
+#drop-naoh {
+    width: 1%;
+    height: 3%;
+    opacity: 1;
+}
+
+/* ******************************************************************   STEP 3   ******************************************************** */
+
+#stp3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#flask-s3 {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 63%;
+    left: 58%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#flask-b3 {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 62%;
+    left: 70%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#funnel-stand {
+    position: absolute;
+    height: 65%;
+    width: 18%;
+    top: 30%;
+    left: 30%;
+    transition: all 1s;
+}
+
+#burner {
+    position: absolute;
+    height: 30%;
+    width: 15%;
+    top: 65%;
+    left: 10%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#stirrer {
+    position: absolute;
+    height: 30%;
+    top: 70%;
+    left: 50%;
+    rotate: 3deg;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 6;
+}
+
+@keyframes stir {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    25% { transform: rotate(0deg) translate(4px, 4px); }
+    50% { transform: rotate(0deg) translate(0px, 8px); }
+    75% { transform: rotate(0deg) translate(-4px, 4px); }
+    100% { transform: rotate(0deg) translate(0px, 0px); }
+}
+
+/* ************************************************************    STEP 4   ************************************************* */
+
+#stp4 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+#flask-s4 {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 62%;
+    left: 40%;
+    transition: all 1s;
+    object-fit: contain;
+}
+
+#flask-b4 {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 61%;
+    left: 55%;
+    transition: all 1s;
+    object-fit: contain;
+}
+
+#distilled-water4 {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 56%;
+    left: 10%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+#measuring-cylinder4 {
+    position: absolute;
+    height: 30%;
+    width: 5%;
+    top: 63%;
+    left: 28%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================================================================================
+   STEP 4 - COMPLETE IMAGE STYLES
+   ============================================================================================================
+   This section contains individual CSS selectors for every image used in Step 4,
+   including initial images and all switched/replaced images.
+   ============================================================================================================ */
+
+/* ------------------------------------------------------------------------------------------------------------
+   FLASK S - INITIAL STATE (flask-saponifiedclear.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#flask-s4[src*="flask-saponifiedclear.png"],
+#flask-s4:not([src*="flasks-after-93ml.png"]) {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 62%;
+    left: 40%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   FLASK S - FILLED STATE (flasks-after-93ml.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#flask-s4[src*="flasks-after-93ml.png"] {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 62%;
+    left: 40%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   FLASK B - INITIAL STATE (flask-b-sample.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#flask-b4[src*="flask-b-sample.png"],
+#flask-b4:not([src*="flaskb-after-93ml.png"]) {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 61%;
+    left: 55%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   FLASK B - FILLED STATE (flaskb-after-93ml.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#flask-b4[src*="flaskb-after-93ml.png"] {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 61%;
+    left: 55%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   DISTILLED WATER BOTTLE - INITIAL STATE (distilled water (2).png)
+   ------------------------------------------------------------------------------------------------------------ */
+#distilled-water4[src*="distilled water (2).png"],
+#distilled-water4:not([src*="after-distill.png"]):not([src*="distilled water.png"]) {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 57%;
+    left: 8%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   DISTILLED WATER BOTTLE - HALF-FILLED STATE (after-distill.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#distilled-water4[src*="after-distill.png"] {
+    position: absolute;
+    height: 80%;
+    width: 25%;
+    top: 30%;
+    left: 8%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   DISTILLED WATER BOTTLE - EMPTY STATE (distilled water.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#distilled-water4[src*="distilled water.png"] {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 56%;
+    left: 10%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - INITIAL EMPTY STATE (measuring cylinder.png)
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4[src*="measuring cylinder.png"] {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - FILLED WITH 93ML STATE (distilled-93ml.png) - FIRST POUR
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4[src*="distilled-93ml.png"] {
+    position: absolute;
+    height: 40%;
+    width: 15%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - FILLED WITH 93ML STATE (distilled-93ml.png) - SECOND POUR
+   Note: This uses different dimensions as set in JavaScript for the second pour
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4[src*="distilled-93ml.png"].second-pour {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - EMPTY STATE AFTER POURING (measuring cylinder.png) - AFTER POUR 1
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4[src*="measuring cylinder.png"].after-pour {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - EMPTY STATE AFTER POURING (measuring cylinder.png) - AFTER POUR 2
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4[src*="measuring cylinder.png"].after-pour-2 {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ============================================================================================================
+   STEP 4 - ANIMATED/TRANSFORMED STATES (During Pouring Actions)
+   ============================================================================================================ */
+
+/* ------------------------------------------------------------------------------------------------------------
+   DISTILLED WATER BOTTLE - POURING POSITION (Right side of cylinder, rotated for pouring)
+   ------------------------------------------------------------------------------------------------------------ */
+#distilled-water4.pouring {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 45%;
+    left: 32%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(-50deg);
+    object-fit: contain;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - POURING INTO FLASK S (Positioned near Flask S, rotated)
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4.pouring-into-flask-s {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 50%;
+    left: 39%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(45deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ------------------------------------------------------------------------------------------------------------
+   MEASURING CYLINDER - POURING INTO FLASK B (Positioned near Flask B, rotated)
+   ------------------------------------------------------------------------------------------------------------ */
+#measuring-cylinder4.pouring-into-flask-b {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 50%;
+    left: 54%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(45deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* ============================================================================================================
+   STEP 4 - ALTERNATIVE SELECTORS (Using Image Filename Patterns)
+   ============================================================================================================
+   These selectors allow you to target images by their filename patterns directly
+   ============================================================================================================ */
+
+/* Flask S - Initial Saponified Clear State */
+#stp4 img[src="images/flask-saponifiedclear.png"] {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 62%;
+    left: 40%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Flask S - After Adding 93ml */
+#stp4 img[src="images/flasks-after-93ml.png"] {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 62%;
+    left: 40%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Flask B - Initial Sample State */
+#stp4 img[src="images/flask-b-sample.png"] {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 61%;
+    left: 58%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Flask B - After Adding 93ml */
+#stp4 img[src="images/flaskb-after-93ml.png"] {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 61%;
+    left: 55%;
+    transition: all 1s;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Distilled Water - Initial Full Bottle */
+#stp4 img[src="images/distilled water (2).png"] {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 30%;
+    left: 4%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+}
+
+/* Distilled Water - Half-Filled Bottle */
+#stp4 img[src="images/after-distill.png"] {
+    position: absolute;
+    height: 80%;
+    width: 25%;
+    top: 30%;
+    left: 4%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+}
+
+/* Distilled Water - Empty Bottle */
+#stp4 img[src="images/distilled water.png"] {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 56%;
+    left: 10%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+}
+
+/* Measuring Cylinder - Empty */
+#stp4 img[src="images/measuring cylinder.png"] {
+    position: absolute;
+    height: 30%;
+    width: 8%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* Measuring Cylinder - Filled with 93ml */
+#stp4 img[src="images/distilled-93ml.png"] {
+    position: absolute;
+    height: 40%;
+    width: 15%;
+    top: 60%;
+    left: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transform: rotate(0deg);
+    object-fit: contain;
+    z-index: 5;
+}
+/* ************************************************************    STEP 4 DROPS   ************************************************* */
+
+/* Common style for all drops in Step 4 */
+.drop-step4 {
+    position: absolute;
+    width: 1.5%; /* Adjust drop width */
+    height: 3%;  /* Adjust drop height */
+    opacity: 0;  /* Hidden by default */
+    z-index: 5;  /* Ensure it's above other elements but below the bottle if needed */
+    pointer-events: none; /* Ensure drops don't interfere with clicks */
+}
+
+/* Keyframes for falling animation */
+@keyframes dropFall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(15vh) scale(0.8); /* Adjust fall distance (15vh) */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(18vh) scale(0.5); /* Fade out at the end */
+    }
+}
+
+/* 
+   ================================================================================
+   USER CONFIGURATION FOR DROPS
+   Adjust top, left, width, height, and animation duration here.
+   ================================================================================
+*/
+
+/* 1. Distilled Water -> Measuring Cylinder (Round 1) */
+#drop-distilled-cylinder-1 {
+    top: 48%;       /* Adjusted: Lower to fall into cylinder */
+    left: 24%;      /* Adjusted: Between bottle (27.5%) and cylinder (21%) */
+    width: 1.2%;
+    height: 2.5%;
+}
+
+/* 2. Measuring Cylinder -> Flask S */
+#drop-cylinder-flask-s {
+    top: 45%;       /* Adjusted: Below cylinder mouth */
+    left: 41%;      /* Adjusted: Inside Flask S (40%) */
+    width: 1.2%;
+    height: 2.5%;
+}
+
+/* 3. Distilled Water -> Measuring Cylinder (Round 2) */
+#drop-distilled-cylinder-2 {
+    top: 40%;       /* Adjusted */
+    left: 23%;      /* Adjusted: Near cylinder (22%) */
+    width: 1.2%;
+    height: 2.5%;
+}
+
+/* 4. Measuring Cylinder -> Flask B */
+#drop-cylinder-flask-b {
+    top: 48%;       /* Adjusted */
+    left: 56%;      /* Adjusted: Inside Flask B (55%) */
+    width: 1.2%;
+    height: 2.5%;
+}
+
+/* ***********************************************************   STEP 5   **************************************************** */
+
+#stp5 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+/* Flask S (Step 5) */
+#flask-s5 {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 55%;
+    left: 40%;
+    transition: all 1s;
+}
+
+/* Flask B (Step 5) */
+#flask-b5 {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 54%;
+    left: 55%;
+    transition: all 1s;
+}
+
+/* Sulfuric Acid Bottle */
+#h2so4 {
+    position: absolute;
+    height: 35%;
+    width: 12%;
+    top: 55%;
+    left: 15%;
+    transition: all 1s;
+}
+
+/* Sulfuric Acid Cork */
+#h2so4-cork {
+    position: absolute;
+    height: 5%;
+    width: 4%;
+    top: 55%; /* On top of bottle */
+    left: 19%; /* Centered on bottle */
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Sulfuric Acid Pipette */
+#h2so4-pipette {
+    position: absolute;
+    height: 40%;
+    width: 3%;
+    top: 55%;
+    left: 25%; /* Initial position next to bottle */
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Sulfuric Acid Pipette - Filled (when using h2s04-in-pipette.png) */
+#stp5 img[src="images/h2s04-in-pipette.png"] {
+    position: absolute;
+    height: 40%;
+    width: 3%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Drops for Step 5 */
+.drop-step5 {
+    position: absolute;
+    width: 1.2%;
+    height: 2.5%;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ************************************************************    STEP 5   ************************************************* */
+
+#stp5 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* Flask S - After 93ml water added */
+#flask-s5 {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 55%;
+    left: 40%;
+    transition: all 1s;
+}
+
+/* Flask B - After 93ml water added */
+#flask-b5 {
+    position: absolute;
+    height: 45%;
+    width: 15%;
+    top: 54%;
+    left: 55%;
+    transition: all 1s;
+}
+
+/* H2SO4 Bottle */
+#h2so4-bottle {
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    top: 57%;
+    left: 8%;
+    transition: all 1s;
+}
+
+/* H2SO4 Cork */
+#h2so4-cork {
+    position: absolute;
+    height: 8%;
+    width: 5%;
+    top: 52%;
+    left: 9.5%;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* H2SO4 Pipette */
+#h2so4-pipette {
+    position: absolute;
+    height: 40%;
+    width: 3.5%;
+    top: 72%;
+    left: 20%;
+    rotate: -90deg;
+    transition: all 1s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Common style for all drops in Step 5 */
+.drop-step5 {
+    position: absolute;
+    width: 1.5%;
+    height: 3%;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Drop configurations for Step 5 */
+#drop-h2so4-flask-s {
+    top: 64%;
+    left: 46.5%;
+    width: 1.2%;
+    height: 2.5%;
+}
+
+#drop-h2so4-flask-b {
+    top: 63%;
+    left: 62%;
+    width: 1.2%;
+    height: 2.5%;
+}
+
+/* *****************************************************************   STEP 11   *********************************************** */
+
+#stp11{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* ************************************************************   STEP 12   ************************************************* */
+
+#stp12{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.drop-step12{
+    position: absolute;
+    height: 2.5%; /* Adjust as per other drops or prompt requirements */
+    width: 0.8%;
+    display: none; /* Hidden by default, cloned drops will be set to block */
+    z-index: 100;
+}
+
+/* ************************************************************   STEP 13   ************************************************* */
+
+#stp13{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.drop-step13{
+    position: absolute;
+    height: 2.5%; /* Adjust as per other drops or prompt requirements */
+    width: 0.8%;
+    display: none; /* Hidden by default, cloned drops will be set to block */
+    z-index: 100;
+}

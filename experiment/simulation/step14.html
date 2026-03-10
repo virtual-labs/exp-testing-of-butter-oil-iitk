@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 14: Observations & Calculations</title>
+    <link rel="stylesheet" href="css/step14.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Step 14: Observations & Calculations</h1>
+            <p class="subtitle">Calculate the Reicher–Meissl (RM) and Polenske (PV) values using your titration readings.</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main>
+            
+            <!-- Left Column: inputs and Info -->
+            <div class="card info-card">
+                <h2>📊 Formulas & Data</h2>
+                
+                <div class="formula-box">
+                    <p><strong>RM Value = T1 − T2</strong></p>
+                    <p class="small">Where <span class="highlight">T1</span> = NaOH used for sample (RM), <span class="highlight">T2</span> = NaOH used for blank (RM).</p>
+                    <hr>
+                    <p><strong>PV Value = T3 − T4</strong></p>
+                    <p class="small">Where <span class="highlight">T3</span> = NaOH used for sample (PV), <span class="highlight">T4</span> = NaOH used for blank (PV).</p>
+                </div>
+
+                <div class="audio-control">
+                    <button id="playAudioBtn" class="audio-btn">🔊 Play Explanation</button>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Table -->
+            <div class="card calculation-card">
+                <h2>📝 Enter Observations</h2>
+                <p class="instruction">Enter the volume of 0.1N NaOH used (in mL)</p>
+
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="t1">T1 (Sample RM)</label>
+                        <input type="number" id="t1" value="21.0" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="t2">T2 (Blank RM)</label>
+                        <input type="number" id="t2" value="19.9" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="t3">T3 (Sample PV)</label>
+                        <input type="number" id="t3" value="7.5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="t4">T4 (Blank PV)</label>
+                        <input type="number" id="t4" value="6.4" step="0.1">
+                    </div>
+                </div>
+
+                <button id="calculateBtn" class="primary-btn">Calculate Values</button>
+
+                <!-- Hidden Results Section -->
+                <div id="resultSection" class="result-section hidden">
+                    <div id="resultFeedback" class="feedback-box">
+                        <!-- Dynamic Content Here -->
+                    </div>
+
+                    <div id="finalConclusion" class="conclusion-box hidden">
+                        <!-- Dynamic Content Here -->
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer / Navigation -->
+        <footer>
+            <button id="backBtn" class="secondary-btn" onclick="window.location.href='index.html'">Back to Main Page</button>
+        </footer>
+
+    </div>
+
+    <script src="script/step14.js"></script>
+</body>
+</html>
