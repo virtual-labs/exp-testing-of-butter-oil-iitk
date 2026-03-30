@@ -483,6 +483,7 @@ function handleTitratedFlaskClick() {
         titratedFlask.style.cursor = "default";
         
         step10State.step = 7;
+        storeTitrationValue('t1', 21.0); // T1: NaOH for Flask S (RM)
         
         setTimeout(() => {
             document.querySelector("#text").innerText = "Step 10 complete! Click NEXT to proceed.";

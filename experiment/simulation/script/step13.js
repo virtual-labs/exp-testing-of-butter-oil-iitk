@@ -486,6 +486,7 @@ function handleBuretteKnob13Click() {
         buretteKnob.style.cursor = "default";
 
         document.querySelector("#text").innerText = "Titration complete for Flask B. Step 13 finished. Click NEXT to proceed to Calculations.";
+        storeTitrationValue('t4', 6.4); // T4: NaOH for Flask B (PV)
         document.querySelector("#start").style.visibility = "visible";
         document.querySelector("#start").innerText = "NEXT";
         f = 130; // Flag for Step 13 done

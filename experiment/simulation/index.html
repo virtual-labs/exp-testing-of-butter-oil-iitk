@@ -20,7 +20,7 @@
             
             <!-- ------------------------------  BACKGROUNDS  ----------------------- -->
             
-            <img id="workingtable" src="images/bg-image.png" alt="">
+            <img id="workingtable" src="images/dairybgimage.jpeg" alt="">
             
 
             
@@ -51,6 +51,11 @@
 
 
 
+
+            <!-- STEP 0 - Instrument Familiarization -->
+            <div id="stp0" style="visibility: hidden;">
+                <!-- Instrument grid will be dynamically created by step0.js -->
+            </div>
 
             <div id="stp1">
               <img id="machine" src="images/wheighing-machine.png" alt="">
@@ -312,13 +317,14 @@
             <button id="skipToStep12" onclick="skipToStep12()" style="position: absolute; top: 310px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 12</button>
             <button id="skipToStep13" onclick="skipToStep13()" style="position: absolute; top: 340px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 13</button>
             <button id="skipToStep14" onclick="window.location.href='step14.html'" style="position: absolute; top: 370px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000;">Skip to Step 14</button>
-            <button id="backToStep1" onclick="backToStep1()" style="position: absolute; top: 10px; right: 130px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000; display: none;">Back to Step 1</button>
+            <button id="backToStep1" onclick="backToStep1()" style="position: absolute; top: 400px; right: 10px; padding: 6px 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; z-index: 1000; display: none;">Back to Step 1</button>
           </div>
         </div>
 
         
     </main>
     <script src="script/project.js"></script>
+    <script src="script/step0.js"></script>
     <script src="script/step1.js"></script>
     <script src="script/step2.js"></script>
     <script src="script/step3.js"></script>

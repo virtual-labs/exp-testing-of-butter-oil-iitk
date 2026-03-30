@@ -30,7 +30,7 @@ function startStep6() {
     // ============================================================================
     if (apparatus) {
         apparatus.style.position = "absolute";
-        apparatus.style.left = "53%";      // EXTREME RIGHT position
+        apparatus.style.left = "40%";      // EXTREME RIGHT position
         apparatus.style.top = "2%";       // Vertical position from top
         apparatus.style.width = "45%";     // Width of apparatus
         apparatus.style.height = "99%";    // Height of apparatus
@@ -50,7 +50,7 @@ function startStep6() {
     // ============================================================================
     if (burner) {
         burner.style.position = "absolute";
-        burner.style.left = "35%";        // CENTER position
+        burner.style.left = "25%";        // CENTER position
         burner.style.top = "70%";         // Vertical position from top
         burner.style.width = "12%";       // Width of burner
         burner.style.height = "22%";      // Height of burner
@@ -74,7 +74,7 @@ function handleBurnerPlacement() {
         //   - top: 78% (adjust vertical position below apparatus)
         // ============================================================================
         burner.style.transition = "all 1.5s ease-in-out";
-        burner.style.left = "60.5%";        // Position below Flask S
+        burner.style.left = "48%";        // Position below Flask S
         burner.style.top = "71%";         // Below the apparatus
         burner.style.cursor = "default";
         

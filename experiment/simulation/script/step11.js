@@ -483,6 +483,7 @@ function handleTitratedFlask11Click() {
         titratedFlask.style.cursor = "default";
         
         step11State.step = 7;
+        storeTitrationValue('t2', 19.9); // T2: NaOH for Flask B (RM)
         
         setTimeout(() => {
             document.querySelector("#text").innerText = "Step 11 complete! You have successfully titrated Flask B filtrate. Click NEXT to finish the experiment.";

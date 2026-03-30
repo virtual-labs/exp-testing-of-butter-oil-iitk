@@ -8,11 +8,13 @@ let step2State = {
 };
 
 function startStep2() {
+    // Reset state cleanly on every entry
+    step2State = { step: 0, glycerolCapOpen: false, naohCapOpen: false, pipetteFilled: false, naohPipetteFilled: false, currentSolution: null };
+
     document.querySelector("#stp2").style.visibility = "visible";
     document.querySelector("#ins").innerText = "Instructions :-";
     document.querySelector("#text").innerText = "Take Flask S containing the ghee sample that was prepared in the previous step.";
     
-    // Preload Flask B sample image
     let preloadImg = new Image();
     preloadImg.src = "images/flask-b-sample.png";
     
@@ -472,9 +474,8 @@ function handleNaOHPipetteClick() {
                                                         document.querySelector("#start").style.visibility = "visible";
                                                         document.querySelector("#start").innerText = "NEXT";
                                                         f = 30;
-                                                        
-                                                        // Ensure no further movement
-                                                        step2State.step = 7; // Move to next logical step to prevent re-triggering
+                                                        statuses = 4;
+                                                        step2State.step = 7;
                                                     }, 1000);
                                                 }, 1000);
                                             }, 100);

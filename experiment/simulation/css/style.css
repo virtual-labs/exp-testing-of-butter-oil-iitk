@@ -93,6 +93,7 @@ body{
     animation: vibrate;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    z-index: 999;
 }
 
 #start:active{
@@ -467,8 +468,8 @@ body{
     height: 100%;
     width: 100%;
     overflow: hidden;
-
-
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 /* *******************************************************************   STEP 2   ************************************************* */
@@ -479,6 +480,8 @@ body{
     width: 100%;
     overflow: hidden;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* ******************************************************************   STEP 3   ******************************************************** */
@@ -489,6 +492,8 @@ body{
     width: 100%;
     overflow: hidden;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #bnob{
@@ -605,7 +610,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
-    
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #stp4sol{
@@ -733,6 +739,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #distilled3{
@@ -837,6 +845,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Step 6 - Distillation Apparatus Setup */
@@ -898,6 +908,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Step 7 - Distillation Process */
@@ -984,6 +996,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Step 8 - Distillation Process for Flask B */
@@ -1070,6 +1084,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Step 9 - Filtration Process */
@@ -1231,6 +1247,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Step 10 - Titration Process */
@@ -1332,6 +1350,8 @@ body{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Step 11 - Titration Process (Flask B) */
@@ -2264,6 +2284,8 @@ th{
     width: 100%;
     visibility: hidden;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .sconicals{
@@ -3364,6 +3386,8 @@ th{
     width: 100%;
     visibility: hidden;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .drop-step13{
