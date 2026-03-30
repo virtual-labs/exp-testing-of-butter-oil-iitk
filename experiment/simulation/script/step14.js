@@ -1,137 +1,215 @@
 /**
- * Step 14: Observations & Calculations Logic
+ * Step 14 — Observations & Calculations
+ *
+ * T1 = NaOH for Flask S (RM)  — Step 10
+ * T2 = NaOH for Flask B (RM)  — Step 11
+ * T3 = NaOH for Flask S (PV)  — Step 12
+ * T4 = NaOH for Flask B (PV)  — Step 13
+ *
+ * The experiment uses fixed simulated titration values.
+ * These are stored in sessionStorage by the main experiment,
+ * or fall back to the standard reference values below.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+const DEFAULTS = { t1: 21.0, t2: 19.9, t3: 7.5, t4: 6.4 };
 
-    const calculateBtn = document.getElementById('calculateBtn');
-    const resultSection = document.getElementById('resultSection');
-    const resultFeedback = document.getElementById('resultFeedback');
-    const finalConclusion = document.getElementById('finalConclusion');
-    const playAudioBtn = document.getElementById('playAudioBtn');
+// Standard reference ranges for pure ghee
+const STANDARDS = {
+    rm: { min: 17, max: 35, label: "17 – 35 mL" },
+    pv: { min: 0.5, max: 1.5, label: "0.5 – 1.5 mL" }
+};
 
-    // Expected Values
-    const EXPECTED_RM = 1.10;
-    const EXPECTED_PV = 1.10;
-    
-    // Audio State
-    let isSpeaking = false;
+let expValues = {};
+let rmCorrect = false;
+let pvCorrect = false;
 
-    // --- Calculation Logic ---
-    calculateBtn.addEventListener('click', () => {
-        // Get Inputs
-        const t1 = parseFloat(document.getElementById('t1').value);
-        const t2 = parseFloat(document.getElementById('t2').value);
-        const t3 = parseFloat(document.getElementById('t3').value);
-        const t4 = parseFloat(document.getElementById('t4').value);
-
-        if (isNaN(t1) || isNaN(t2) || isNaN(t3) || isNaN(t4)) {
-            alert("Please enter valid numbers for all fields.");
-            return;
-        }
-
-        // Calculate
-        const rmValue = t1 - t2;
-        const pvValue = t3 - t4;
-
-        // Round for display and comparison (2 decimal places)
-        const rmDisplay = rmValue.toFixed(2);
-        const pvDisplay = pvValue.toFixed(2);
-
-        // Verification (Allowance for small floating point errors, though we use decimals)
-        // Here we require exact match to 1.10 as per prompt inputs 21.0-19.9
-        const isCorrect = (Math.abs(rmValue - EXPECTED_RM) < 0.05) && (Math.abs(pvValue - EXPECTED_PV) < 0.05);
-
-        // UI Update
-        resultSection.classList.remove('hidden');
-        resultSection.style.display = 'block'; // Ensure display if it was none
-
-        // Clear previous classes
-        resultFeedback.className = 'feedback-box';
-        finalConclusion.className = 'conclusion-box hidden';
-
-        if (isCorrect) {
-            // Correct Answer UI
-            resultFeedback.classList.add('correct');
-            resultFeedback.innerHTML = `
-                <h3>🎉 Correct Answer!</h3>
-                <p><strong>RM Value = ${rmDisplay}</strong> &nbsp;|&nbsp; <strong>PV Value = ${pvDisplay}</strong></p>
-                <p>Your calculations match the experimental data beautifully.</p>
-            `;
-
-            // Show Conclusion
-            setTimeout(() => {
-                finalConclusion.classList.remove('hidden');
-                finalConclusion.classList.add('conclusion-correct');
-                finalConclusion.innerHTML = `
-                    <h3>🌟 Final Conclusion</h3>
-                    <p>Congratulations! You have successfully calculated the RM and PV values.</p>
-                    <p>This concludes the determination of volatile fatty acids in Ghee.</p>
-                `;
-            }, 600); // Slight delay for flow
-
-        } else {
-            // Wrong Answer UI
-            resultFeedback.classList.add('wrong');
-            resultFeedback.innerHTML = `
-                <h3>❌ Wrong Answer</h3>
-                <div class="detailed-feedback">
-                    <p><strong>Your Result:</strong> RM = ${rmDisplay}, PV = ${pvDisplay}</p>
-                    <p><strong>Correct Result:</strong> RM = ${EXPECTED_RM.toFixed(2)}, PV = ${EXPECTED_PV.toFixed(2)}</p>
-                    <hr>
-                    <p><strong>Formulas:</strong></p>
-                    <p class="calc-step">RM = T1 - T2 = ${t1} - ${t2} = ${(t1-t2).toFixed(2)}</p>
-                    <p class="calc-step">PV = T3 - T4 = ${t3} - ${t4} = ${(t3-t4).toFixed(2)}</p>
-                </div>
-            `;
-
-            // Show Conclusion (Wrong variant)
-            setTimeout(() => {
-                finalConclusion.classList.remove('hidden');
-                finalConclusion.classList.add('wrong'); // Reuse wrong style for consistency
-                finalConclusion.innerHTML = `
-                    <h3>⚠️ Calculation Error</h3>
-                    <p>Your calculation did not match the expected values.</p>
-                    <p>Please review the formulas and observation values above and try again.</p>
-                `;
-            }, 600);
-        }
+// ── Load values from sessionStorage (set by main experiment) or use defaults ──
+function loadExpValues() {
+    const keys = ['t1', 't2', 't3', 't4'];
+    keys.forEach(k => {
+        const stored = sessionStorage.getItem('ghee_' + k);
+        expValues[k] = stored !== null ? parseFloat(stored) : DEFAULTS[k];
     });
 
-
-    // --- Audio Logic ---
-    playAudioBtn.addEventListener('click', () => {
-        if ('speechSynthesis' in window) {
-            if (isSpeaking) {
-                window.speechSynthesis.cancel();
-                isSpeaking = false;
-                playAudioBtn.innerText = "🔊 Play Explanation";
-            } else {
-                const text = "In this step, we calculate the Reicher–Meissl and Polenske values using the volumes of 0.1 Normal Sodium Hydroxide used during titration. RM is obtained by subtracting the blank reading from the sample reading for the water-insoluble volatile acids. PV is similarly calculated for steam-volatile fatty acids. Your final values appear below.";
-                const utterance = new SpeechSynthesisUtterance(text);
-                
-                // Voice selection preferences (same as audio-system.js)
-                const voices = window.speechSynthesis.getVoices();
-                const preferredVoice = voices.find(voice => 
-                    voice.name.includes('Google English (India)') || 
-                    voice.name.includes('Microsoft Heera') ||
-                    voice.name.includes('Female')
-                );
-                if (preferredVoice) utterance.voice = preferredVoice;
-
-                utterance.rate = 0.9;
-                utterance.onend = () => {
-                    isSpeaking = false;
-                    playAudioBtn.innerText = "🔊 Play Explanation";
-                };
-
-                window.speechSynthesis.speak(utterance);
-                isSpeaking = true;
-                playAudioBtn.innerText = "⏹ Stop Audio";
-            }
-        } else {
-            alert("Sorry, your browser does not support text-to-speech.");
+    // Display in observation table
+    keys.forEach(k => {
+        const el = document.getElementById('disp-' + k);
+        if (el) {
+            el.textContent = expValues[k].toFixed(1) + ' mL';
+            el.classList.add('loaded');
         }
     });
+}
 
-});
+// ── Helpers ──
+function getCorrectRM() { return parseFloat((expValues.t1 - expValues.t2).toFixed(2)); }
+function getCorrectPV() { return parseFloat((expValues.t3 - expValues.t4).toFixed(2)); }
+
+function showFeedback(id, type, html) {
+    const el = document.getElementById(id);
+    el.className = 'feedback ' + type;
+    el.innerHTML = html;
+}
+
+function checkBothDone() {
+    if (rmCorrect && pvCorrect) showConclusion();
+}
+
+// ── RM: Check ──
+function checkRM() {
+    const val = parseFloat(document.getElementById('rm-input').value);
+    if (isNaN(val)) { alert('Please enter a numeric RM value.'); return; }
+    const correct = getCorrectRM();
+    if (Math.abs(val - correct) <= 0.05) {
+        rmCorrect = true;
+        showFeedback('rm-feedback', 'correct',
+            `<div class="fb-title">Correct</div>
+             <p>Your RM Value = <strong>${val.toFixed(2)} mL</strong> is correct.</p>`
+        );
+        checkBothDone();
+    } else {
+        showFeedback('rm-feedback', 'wrong',
+            `<div class="fb-title">Incorrect</div>
+             <p>Your answer: <strong>${val.toFixed(2)} mL</strong></p>
+             <p>Hint: Use the formula <em>RM = T₁ − T₂</em>. Click <strong>Formula</strong> for the full solution.</p>`
+        );
+    }
+}
+
+// ── RM: Formula ──
+function showRMFormula() {
+    const { t1, t2 } = expValues;
+    const ans = getCorrectRM();
+    showFeedback('rm-feedback', 'formula',
+        `<div class="fb-title">Formula & Calculation</div>
+         <p><strong>RM Value = T₁ − T₂</strong></p>
+         <p>Where:</p>
+         <ul style="margin:6px 0 6px 18px;">
+           <li>T₁ = Volume of 0.1N NaOH for Flask S (RM) = <strong>${t1.toFixed(1)} mL</strong></li>
+           <li>T₂ = Volume of 0.1N NaOH for Flask B (RM) = <strong>${t2.toFixed(1)} mL</strong></li>
+         </ul>
+         <p>Calculation:</p>
+         <p><span class="calc-line">RM = ${t1.toFixed(1)} − ${t2.toFixed(1)} = <strong>${ans.toFixed(2)} mL</strong></span></p>`
+    );
+}
+
+// ── RM: Result ──
+function showRMResult() {
+    const { t1, t2 } = expValues;
+    const ans = getCorrectRM();
+    const inRange = ans >= STANDARDS.rm.min && ans <= STANDARDS.rm.max;
+    rmCorrect = true;
+    showFeedback('rm-feedback', 'result',
+        `<div class="fb-title">Complete Solution</div>
+         <p><strong>RM Value = T₁ − T₂ = ${t1.toFixed(1)} − ${t2.toFixed(1)} = ${ans.toFixed(2)} mL</strong></p>
+         <hr style="margin:10px 0;border:0;border-top:1px solid #ddd;">
+         <p><strong>Conclusion:</strong> The RM value of <strong>${ans.toFixed(2)} mL</strong> is 
+         ${inRange
+            ? `<span style="color:#15803d;font-weight:700;">within</span> the standard range (${STANDARDS.rm.label}) for pure ghee, indicating <strong>no adulteration</strong> with non-volatile fats.`
+            : `<span style="color:#b91c1c;font-weight:700;">outside</span> the standard range (${STANDARDS.rm.label}) for pure ghee, which may indicate <strong>adulteration</strong>.`
+         }</p>`
+    );
+    checkBothDone();
+}
+
+// ── PV: Check ──
+function checkPV() {
+    const val = parseFloat(document.getElementById('pv-input').value);
+    if (isNaN(val)) { alert('Please enter a numeric PV value.'); return; }
+    const correct = getCorrectPV();
+    if (Math.abs(val - correct) <= 0.05) {
+        pvCorrect = true;
+        showFeedback('pv-feedback', 'correct',
+            `<div class="fb-title">Correct</div>
+             <p>Your PV Value = <strong>${val.toFixed(2)} mL</strong> is correct.</p>`
+        );
+        checkBothDone();
+    } else {
+        showFeedback('pv-feedback', 'wrong',
+            `<div class="fb-title">Incorrect</div>
+             <p>Your answer: <strong>${val.toFixed(2)} mL</strong></p>
+             <p>Hint: Use the formula <em>PV = T₃ − T₄</em>. Click <strong>Formula</strong> for the full solution.</p>`
+        );
+    }
+}
+
+// ── PV: Formula ──
+function showPVFormula() {
+    const { t3, t4 } = expValues;
+    const ans = getCorrectPV();
+    showFeedback('pv-feedback', 'formula',
+        `<div class="fb-title">Formula & Calculation</div>
+         <p><strong>PV Value = T₃ − T₄</strong></p>
+         <p>Where:</p>
+         <ul style="margin:6px 0 6px 18px;">
+           <li>T₃ = Volume of 0.1N NaOH for Flask S (PV) = <strong>${t3.toFixed(1)} mL</strong></li>
+           <li>T₄ = Volume of 0.1N NaOH for Flask B (PV) = <strong>${t4.toFixed(1)} mL</strong></li>
+         </ul>
+         <p>Calculation:</p>
+         <p><span class="calc-line">PV = ${t3.toFixed(1)} − ${t4.toFixed(1)} = <strong>${ans.toFixed(2)} mL</strong></span></p>`
+    );
+}
+
+// ── PV: Result ──
+function showPVResult() {
+    const { t3, t4 } = expValues;
+    const ans = getCorrectPV();
+    const inRange = ans >= STANDARDS.pv.min && ans <= STANDARDS.pv.max;
+    pvCorrect = true;
+    showFeedback('pv-feedback', 'result',
+        `<div class="fb-title">Complete Solution</div>
+         <p><strong>PV Value = T₃ − T₄ = ${t3.toFixed(1)} − ${t4.toFixed(1)} = ${ans.toFixed(2)} mL</strong></p>
+         <hr style="margin:10px 0;border:0;border-top:1px solid #ddd;">
+         <p><strong>Conclusion:</strong> The PV value of <strong>${ans.toFixed(2)} mL</strong> is 
+         ${inRange
+            ? `<span style="color:#15803d;font-weight:700;">within</span> the standard range (${STANDARDS.pv.label}) for pure ghee, indicating <strong>no coconut or palm kernel oil adulteration</strong>.`
+            : `<span style="color:#b91c1c;font-weight:700;">outside</span> the standard range (${STANDARDS.pv.label}) for pure ghee, which may indicate <strong>adulteration with lauric acid-rich fats</strong>.`
+         }</p>`
+    );
+    checkBothDone();
+}
+
+// ── Final Conclusion ──
+function showConclusion() {
+    const rm = getCorrectRM();
+    const pv = getCorrectPV();
+    const rmOk = rm >= STANDARDS.rm.min && rm <= STANDARDS.rm.max;
+    const pvOk = pv >= STANDARDS.pv.min && pv <= STANDARDS.pv.max;
+    const bothOk = rmOk && pvOk;
+
+    const section = document.getElementById('conclusion-section');
+    const body = document.getElementById('conclusion-body');
+
+    body.innerHTML = `
+        <div class="conc-block">
+            <h3>Reicher–Meissl Value</h3>
+            <div class="value-badge">${rm.toFixed(2)} mL</div>
+            <p>Standard range: <strong>${STANDARDS.rm.label}</strong></p>
+            <p style="margin-top:6px;">${rmOk
+                ? 'Within standard range — indicates presence of water-soluble volatile fatty acids typical of pure ghee.'
+                : 'Outside standard range — may indicate adulteration.'
+            }</p>
+        </div>
+        <div class="conc-block">
+            <h3>Polenske Value</h3>
+            <div class="value-badge">${pv.toFixed(2)} mL</div>
+            <p>Standard range: <strong>${STANDARDS.pv.label}</strong></p>
+            <p style="margin-top:6px;">${pvOk
+                ? 'Within standard range — indicates absence of coconut or palm kernel oil adulteration.'
+                : 'Outside standard range — may indicate adulteration with lauric acid-rich fats.'
+            }</p>
+        </div>
+        <div class="conc-block standard">
+            <h3>Overall Conclusion</h3>
+            <p>${bothOk
+                ? 'Both the RM value (<strong>' + rm.toFixed(2) + ' mL</strong>) and PV value (<strong>' + pv.toFixed(2) + ' mL</strong>) fall within the standard ranges for pure Butter Oil (Ghee). The sample is <strong>pure and unadulterated</strong>. The experiment has been successfully completed.'
+                : 'One or more values fall outside the standard ranges. The sample may be <strong>adulterated</strong>. Further analysis is recommended.'
+            }</p>
+        </div>`;
+
+    section.classList.remove('hidden');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── Init ──
+document.addEventListener('DOMContentLoaded', loadExpValues);
