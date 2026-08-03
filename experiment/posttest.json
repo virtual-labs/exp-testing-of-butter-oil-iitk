@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The R.M. value is calculated from:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Volume of acid used",
+        "b": "Volume of alkali used for water-soluble acids",
+        "c": "Weight of ghee sample",
+        "d": "Temperature of distillation"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The Polenske value is determined after:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Direct titration of ghee",
+        "b": "Filtration and titration of alcohol-soluble residue",
+        "c": "Measuring moisture content",
+        "d": "Heating without saponification"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A low R.M. value in ghee may indicate:",
+      "answers": {
+        "a": "High purity",
+        "b": "Adulteration with vegetable oils or animal body fats",
+        "c": "Excess moisture",
+        "d": "High protein content"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is a blank determination performed in this experiment?",
+      "answers": {
+        "a": "To increase volume",
+        "b": "To correct experimental errors",
+        "c": "To standardize glycerol",
+        "d": "To increase acidity"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The distillation time (19–21 minutes) is controlled to ensure:",
+      "answers": {
+        "a": "Faster evaporation",
+        "b": "Proper collection of volatile fatty acids",
+        "c": "Cooling of apparatus",
+        "d": "Reduction of sample weight"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
