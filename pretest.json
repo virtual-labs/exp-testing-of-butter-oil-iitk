@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The Reichert–Meissl (R.M.) value mainly indicates the presence of:",
+      "answers": {
+        "a": "Unsaturated fatty acids",
+        "b": "Long chain fatty acids",
+        "c": "Water-soluble volatile fatty acids",
+        "d": "Non-volatile fatty acids"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The Polenske value measures:",
+      "answers": {
+        "a": "Water-soluble volatile fatty acids",
+        "b": "Water-insoluble volatile fatty acids",
+        "c": "Total fat content",
+        "d": "Moisture content"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The R.M. value of good quality cow or buffalo ghee should not be less than:",
+      "answers": {
+        "a": "10",
+        "b": "20",
+        "c": "28",
+        "d": "35"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which reagent is used for titration in the determination of R.M. and Polenske values?",
+      "answers": {
+        "a": "0.1N Sodium hydroxide",
+        "b": "Hydrochloric acid",
+        "c": "Nitric acid",
+        "d": "Silver nitrate"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "During the experiment, phenolphthalein is used as:",
+      "answers": {
+        "a": "Catalyst",
+        "b": "Indicator",
+        "c": "Preservative",
+        "d": "Solvent"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
